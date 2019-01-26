@@ -48,16 +48,16 @@
         </a>
         <span class="brand-name animated-4th lightSpeedIn">Swiftcrates</span>
         <button class="navbar-toggler animated-2nd fadeInDown" data-toggle="collapse" data-target="#lol">
-          <div id="nav-icon4">
-            <span></span>
-            <span></span>
-            <span></span>
+          <div class="nav-icon4">
+            <span class="first-span"></span>
+            <span class="second-span"></span>
+            <span class="third-span"></span>
           </div>
         </button>
         <div class="collapse navbar-collapse  getquoted-style" id="lol">
           <ul class="navbar-nav ml-auto mr-auto">
             <li class="nav-item  pulse-hover">
-              <a href="howitworks.html" class="nav-link active animated-3rd fadeInDown"><span class="menu__item-name">How it
+              <a href="howitworks.html" class="nav-link animated-3rd fadeInDown"><span class="menu__item-name">How it
                   works</span></a>
             </li>
             <li class="nav-item pulse-hover">
@@ -77,7 +77,7 @@
           <ul class="navbar-nav right-float">
             <li class="nav-item pulse-hover">
               <a href="#" class="nav-link animated-6th fadeInDown">
-                <span class="blue-navlink">Get Quoted <i class="fas fa-angle-right"></i></span>
+                <span class="blue-navlink animated-6th fadeInDown">Get Quoted <i class="fas fa-angle-right"></i></span>
               </a>
             </li>
           </ul>
@@ -221,6 +221,15 @@
   <script src="js/wow.min.js"></script>
   <script>
     new WOW().init();
+  </script>
+
+  <!--burger JS-->
+  <script>
+    $(document).ready(function () {
+        $(".nav-icon4").click(function () {
+          $(this).toggleClass("open");
+        });
+      });
   </script>
 </body>
 

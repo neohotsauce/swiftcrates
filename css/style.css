@@ -75,6 +75,15 @@ body {
   font-size: 1.1rem;
   font-weight: bold;
   font-family: "Pacifico", cursive;
+  color: rgb(70, 70, 70);
+}
+
+#brand-name-nav {
+  text-decoration: none;
+}
+
+#brand-name-nav:hover {
+  text-decoration: none !important;
 }
 
 .front-gif {
@@ -259,6 +268,10 @@ body {
   float: right;
 }
 
+.footer-get-quoted:hover {
+  background-color: #374ac4;
+}
+
 .footer-contact-us {
   min-width: 120px;
   background-color: transparent;
@@ -268,6 +281,11 @@ body {
   font-size: 1rem;
   border-color: #fff;
   float: right;
+}
+
+.footer-contact-us:hover {
+  color: rgb(185, 185, 185);
+  border-color: rgb(185, 185, 185);
 }
 
 .main-footer {
@@ -336,6 +354,127 @@ body {
   font-size: 1rem;
 }
 
+/*styles for get quoted page*/
+#get-quoted-form {
+  max-width: 700px;
+  margin-top: 100px;
+}
+
+#get-quoted-form form {
+  padding: 5vw;
+  border: 2px #6e80f0 solid;
+  border-radius: 10px;
+}
+
+#get-quoted-form label {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #6e80f0;
+}
+
+#get-quoted-form button {
+  background-color: #6e80f0;
+  color: #fff;
+  font-size: 1.5rem;
+  margin-top: 30px;
+}
+
+#get-quoted-form button:hover {
+  background-color: #374ac4;
+}
+
+/*styles for calculator*/
+
+.calculator {
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: #88888850;
+  position: fixed;
+  z-index: 2000;
+  display: none;
+}
+
+.calculator h1 {
+  margin-bottom: 10%;
+  text-align: center;
+  font-family: "Roboto Mono", monospace;
+  color: #6e80f0;
+}
+
+.calculator label {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  color: rgb(33, 37, 41);
+}
+
+.radio-label {
+  margin-bottom: 0;
+  font-weight: bold;
+  font-size: 1.15rem;
+  color: #6e80f0;
+}
+
+.radio-div {
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+
+.calculator i {
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+  font-size: 1.75rem;
+  cursor: pointer;
+}
+
+.calculator i:hover {
+  color: #6e80f0;
+  font-weight: bold;
+}
+
+.calculator > .container {
+  max-width: 700px;
+  padding-top: 5vh;
+}
+
+.calculator form {
+  background-color: #fff;
+  padding: 3vw 5vw 5vw 5vw;
+  border-radius: 10px;
+}
+
+.calculator .form-check {
+  display: inline-block !important;
+}
+
+.calculator button {
+  background-color: #6e80f0;
+  color: #fff;
+  font-size: 1.5rem;
+  margin-top: 30px;
+}
+
+.calculator button:hover {
+  background-color: #374ac4;
+}
+
+.calculator h2 {
+  font-family: "Roboto Mono", monospace;
+  color: #6e80f0;
+  margin-top: 10px;
+}
+
+#final-price {
+  color: rgb(33, 37, 41);
+}
+
+.show-calculator {
+  display: flex !important;
+}
+
 @media (max-width: 992px) {
   .front-gif {
     max-width: 100%;
@@ -373,6 +512,9 @@ body {
   }
   #steps-detailed .order-last {
     order: -1;
+  }
+  .social-media {
+    text-align: center;
   }
 }
 

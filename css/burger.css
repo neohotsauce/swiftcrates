@@ -1,4 +1,4 @@
-#nav-icon4 {
+.nav-icon4 {
   width: 30px;
   height: 22px;
   position: relative;
@@ -13,7 +13,7 @@
   cursor: pointer;
 }
 
-#nav-icon4 span {
+.nav-icon4 span {
   display: block;
   position: absolute;
   height: 4px;
@@ -32,7 +32,7 @@
   transition: 0.25s ease-in-out;
 }
 
-#nav-icon4 span:nth-child(1) {
+.nav-icon4 .first-span {
   top: 0px;
   -webkit-transform-origin: left center;
   -moz-transform-origin: left center;
@@ -40,7 +40,7 @@
   transform-origin: left center;
 }
 
-#nav-icon4 span:nth-child(2) {
+.nav-icon4 .second-span {
   top: 10px;
   -webkit-transform-origin: left center;
   -moz-transform-origin: left center;
@@ -48,7 +48,7 @@
   transform-origin: left center;
 }
 
-#nav-icon4 span:nth-child(3) {
+.nav-icon4 .third-span {
   top: 20px;
   -webkit-transform-origin: left center;
   -moz-transform-origin: left center;
@@ -56,7 +56,7 @@
   transform-origin: left center;
 }
 
-#nav-icon4.open span:nth-child(1) {
+.nav-icon4.open .first-span {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
@@ -65,12 +65,12 @@
   left: 4px;
 }
 
-#nav-icon4.open span:nth-child(2) {
+.nav-icon4.open .second-span {
   width: 0%;
   opacity: 0;
 }
 
-#nav-icon4.open span:nth-child(3) {
+.nav-icon4.open .third-span {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
