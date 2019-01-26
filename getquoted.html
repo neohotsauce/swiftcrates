@@ -88,16 +88,17 @@
 
   <section id="get-quoted-form" class="mx-auto">
     <div class="container">
-      <form name="get-quoted" method="POST" data-netlify="true">
+      <h1>Get a Quote!</h1>
+      <form name="get-quoted" method="POST" data-netlify="true" id="quote-form">
         <div class="form-group">
           <label for="full-name">FULL NAME</label>
-          <input type="text" class="form-control" id="full-name" aria-describedby="full-name-help" placeholder="Your Name">
+          <input type="text" class="form-control" id="full-name" aria-describedby="full-name-help" placeholder="Your Name" required>
         </div>
         <div class="row">
           <div class="col-6">
             <div class="form-group">
               <label for="item-links">PRODUCT LINKS</label>
-              <textarea name="" id="item-links" rows="3" class="form-control" placeholder="http://" aria-describedby="product-links-help"></textarea>
+              <textarea name="" id="item-links" rows="3" class="form-control" placeholder="http://" aria-describedby="product-links-help" required></textarea>
             </div>
           </div>
           <div class="col-6">
@@ -121,11 +122,12 @@
         </div>
         <div class="form-group">
           <label for="contact-number">CONTACT NUMBER</label>
-          <input type="number" class="form-control" id="contact-number" aria-describedby="contact-number-help" placeholder="Your phone number">
+          <input type="number" class="form-control" id="contact-number" aria-describedby="contact-number-help" placeholder="Your phone number" required>
         </div>
         <div class="form-group">
           <label for="email">EMAIL ADDRESS</label>
-          <input type="email" class="form-control" id="email" aria-describedby="email-help" placeholder="Your Email address">
+          <input type="email" data-require-error="Email is required" data-pattern-error="Invalid email format"
+ class="form-control" id="email" aria-describedby="email-help" placeholder="Your Email address" required>
         </div>
         <button type="submit" class="btn">Get Quoted</button>
       </form>
@@ -197,14 +199,19 @@
   <!--typed.js CDN-->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 
+    <!--form validation js-->
+    <script src="js/form-validation.js"></script>
+
   <!--custom js file-->
   <script src="js/main.js"></script>
+
 
   <!--wow js-->
   <script src="js/wow.min.js"></script>
   <script>
     new WOW().init();
   </script>
+
 
   <!--burger JS-->
   <script>

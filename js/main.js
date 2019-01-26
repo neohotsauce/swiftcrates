@@ -42,9 +42,15 @@ function calculatePrice() {
 function showCalculator() {
   var element = document.getElementById("calculator-popup");
   element.classList.add("show-calculator");
+  var element2 = document.getElementById("body-popup");
+  element2.classList.add("no-scroll");
 }
 
 function closeCalculator() {
   var element = document.getElementById("calculator-popup");
   element.classList.remove("show-calculator");
+  var element2 = document.getElementById("body-popup");
+  element2.classList.remove("no-scroll");
 }
+
+document.getElementById("quote-form").validateForm();

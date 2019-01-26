@@ -2,6 +2,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.no-scroll {
+  overflow: hidden !important;
+}
+
 .navbar {
   background-color: #fff;
   border-bottom: none;
@@ -26,6 +30,12 @@ body {
 
 .navbar-toggler {
   border: none !important;
+  padding: 0;
+}
+
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: none;
 }
 
 .nav-link {
@@ -125,7 +135,7 @@ body {
   background-color: #6e80f0;
   color: #fff;
   float: left;
-  font-size: 1.5rem;
+  background-color: #374ac4;
 }
 
 .gif-button-2 {
@@ -142,7 +152,6 @@ body {
   background-color: #6e80f0;
   color: #fff;
   float: left;
-  font-size: 1.5rem;
 }
 
 #steps > .container {
@@ -166,7 +175,7 @@ body {
 #brands > h1 {
   font-family: "Roboto Mono", monospace;
   font-size: 54px;
-  color: rgb(33, 37, 41);
+  color: #6e80f0;
   font-weight: 400;
   text-align: center;
   margin-top: 20vh;
@@ -382,6 +391,11 @@ body {
 
 #get-quoted-form button:hover {
   background-color: #374ac4;
+}
+
+#get-quoted-form h1 {
+  color: #6e80f0;
+  font-family: "Roboto Mono", monospace;
 }
 
 /*styles for calculator*/
