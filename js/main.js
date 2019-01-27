@@ -42,8 +42,11 @@ function calculatePrice() {
     finalshipping = shippingcharge;
   }
   var totalprice = (+finalshipping + +price) * 1.12 * 1.06;
-  var finalprice = totalprice.toFixed(2);
-  document.getElementById("final-price").innerHTML = "$" + finalprice;
+  var mvrprice = +totalprice * 15.42;
+  var multiplier = +mvrprice / 5;
+  var int_multiplier = Math.round(+multiplier);
+  var finalprice = +int_multiplier * 5;
+  document.getElementById("final-price").innerHTML = "MVR " + finalprice;
 }
 
 function showCalculator() {
