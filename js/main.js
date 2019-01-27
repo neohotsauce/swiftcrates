@@ -34,7 +34,14 @@ function calculatePrice() {
       rate_value = weight_unit[i].value;
     }
   }
-  var totalprice = (+weight * +rate_value + +price * 1.12) * 1.06;
+  var shippingcharge = +weight * +rate_value;
+  var finalshipping;
+  if (shippingcharge < 4.5) {
+    finalshipping = 4.5;
+  } else {
+    finalshipping = shippingcharge;
+  }
+  var totalprice = (+finalshipping + +price * 1.12) * 1.06;
   var finalprice = totalprice.toFixed(2);
   document.getElementById("final-price").innerHTML = "$" + finalprice;
 }
