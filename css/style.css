@@ -409,6 +409,12 @@ styles for footer section starts here
   margin-top: 5vh;
   padding-bottom: 2vh;
 }
+
+#swift-footer .main-footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
 /*
 -
 -
@@ -581,6 +587,45 @@ styles for footer section ends here
 
 .show-calculator {
   display: flex !important;
+}
+/*
+-
+-
+-
+-
+-
+styles for calculator ends here
+-
+-
+-
+-
+*/
+
+/*
+-
+-
+-
+-
+styles for privacy policy starts here
+-
+-
+-
+-
+*/
+#privacy-policy h1,
+#privacy-policy h4 {
+  color: #6e80f0;
+  font-family: "Roboto Mono", monospace;
+}
+
+#privacy-policy h4 {
+  margin-top: 10vh;
+}
+
+#privacy-policy p,
+#privacy-policy li {
+  font-family: "Roboto", sans-serif;
+  color: rgb(95, 95, 95);
 }
 
 @media (max-width: 992px) {
