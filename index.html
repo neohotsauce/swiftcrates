@@ -49,10 +49,10 @@
     <header>
       <nav class="navbar navbar-expand-md navbar-light menu--inola fixed-top">
         <div class="container">
-          <a href="index.html" class="navbar-brand float-left animated-6th lightSpeedIn">
+          <a href="index.html" class="navbar-brand float-left animated-4th lightSpeedIn">
             <img src="img/logo.png" width="auto" height="40" alt="Swiftcrates logo" />
           </a>
-          <a href="index.html" id="brand-name-nav"><span class="brand-name animated-4th lightSpeedIn">Swiftcrates</span></a>
+          <a href="index.html" id="brand-name-nav"><span class="brand-name animated-3rd lightSpeedIn">SwiftCrates</span></a>
           <button
             class="navbar-toggler animated-2nd fadeInDown"
             data-toggle="collapse"
@@ -74,8 +74,9 @@
               <li class="nav-item pulse-hover">
                 <a href="#" class="nav-link menu__item animated-4th fadeInDown"><span class="menu__item-name">Shipping rates</span></a>
               </li>
-              <li class="nav-item pulse-hover">
-                <a href="#" class="nav-link menu__item animated-5th fadeInDown" onclick="showCalculator()"><span class="menu__item-name"><i class="fas fa-calculator"></i> Calculator</span></a>
+              <li class="nav-item pulse-hover calculator-nav-link">
+                <a class="nav-link menu__item animated-5th fadeInDown" onclick="showCalculator()"><span class="menu__item-name"><i
+                      class="fas fa-calculator"></i> Calculator</span></a>
               </li>
               <li class="nav-item pulse-hover">
                 <a href="#" class="nav-link menu__item animated-6th fadeInDown"><span class="menu__item-name">Faq</span></a>
@@ -95,15 +96,15 @@
       </nav>
     </header>
 
-    <section>
+    <section id="hero">
       
         <div class="container">
           <div class="row">
             <div class="col-md gif-content">
               <h1 id="typed2"></h1>
               <p class="gif-text animated-6th fadeIn">If you have always wished to tap in the US market but never had the viable option, <strong>Swiftcrates</strong> is the perfect solution.</p>
-              <button type="button" class="btn gif-button btn-lg animated-4th lightSpeedIn">Get a Quote <i class="fas fa-angle-right"></i></button>
-              <button type="button" class="btn btn-lg gif-button-2 animated-3rd lightSpeedIn">Learn more</button>
+              <a href="getquoted.html"><button type="button" class="btn gif-button btn-lg animated-3rd lightSpeedIn">Get a Quote <i class="fas fa-angle-right"></i></button></a>
+              <button type="button" class="btn btn-lg gif-button-2 animated-2nd lightSpeedIn">Learn more</button>
             </div>
             <div class="col-md text-center">
               <img class="front-gif animated-6th fadeIn img-fluid" src="img/frontgif.gif" alt="swiftcrates animation">
@@ -208,7 +209,7 @@
         <div class="row">
           <div class="col-md-4 wow fadeIn" data-wow-duration="2s">
             <i class="far fa-money-bill-alt"></i>
-            <h5>Lowest internation shipping rates</h5>
+            <h5>Lowest international shipping rates</h5>
             <p>Get exclusive low prices, to maximize savings for you on shipping rates.</p>
           </div>
           <div class="col-md-4 wow fadeIn" data-wow-duration="2s">
@@ -247,32 +248,33 @@
         </div>
         <form class="shipping-calculator">
           <h1>Shipping Calculator</h1>
-          <div class="form-group">
-            <label for="total-weight">Total shipping weight</label>
-            <input type="number" class="form-control" id="total-weight" onchange="calculatePrice()" aria-describedby="total-weight-help" placeholder="0.00">
-          </div>
           <div class="radio-div">
             <div class="form-check pound-radio">
               <p class="radio-label">Unit weight</p>
-              <input class="form-check-input" type="radio" name="weight-unit" onchange="calculatePrice()" id="weight-pounds" value="9">
+              <input class="form-check-input" type="radio" name="weight-unit" id="weight-pounds" value="9" checked onchange="calculatePrice()">
               <label class="form-check-label" for="weight-pounds">
                 Pounds
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="weight-unit" onchange="calculatePrice()" id="weight-ounce" value="0.5625">
+              <input class="form-check-input" type="radio" name="weight-unit" id="weight-ounce" value="0.5625" onchange="calculatePrice()">
               <label class="form-check-label" for="weight-ounce">
                 Ounce
               </label>
             </div>
           </div>
           <div class="form-group">
+            <label for="total-weight">Total shipping weight</label>
+            <input type="number" class="form-control" id="total-weight" aria-describedby="total-weight-help" placeholder="0.00" onchange="calculatePrice()">
+          </div>
+          
+          <div class="form-group">
             <label for="total-price">Package value</label>
             <div class="input-group">
               <div class="input-group-prepend">
                 <span class="input-group-text" id="dollar-symbol">$</span>
               </div>
-              <input type="number" class="form-control" onchange="calculatePrice()" id="total-price" aria-describedby="dollar-symbol" placeholder="0.00">
+              <input type="number" class="form-control" id="total-price" aria-describedby="dollar-symbol" placeholder="0.00" onchange="calculatePrice()">
             </div>
             <button class="btn btn-lg" type="button" onclick="calculatePrice()">CALCULATE</button>
             <h2>Total price: <output id="final-price" name="x"></output></h2>

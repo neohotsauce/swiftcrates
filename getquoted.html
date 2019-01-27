@@ -39,14 +39,14 @@
 
 </head>
 
-<body>
+<body id="body-popup">
   <header>
     <nav class="navbar navbar-expand-md navbar-light menu--inola fixed-top">
       <div class="container">
-        <a href="index.html" class="navbar-brand float-left animated-6th lightSpeedIn">
+        <a href="index.html" class="navbar-brand float-left animated-4th lightSpeedIn">
           <img src="img/logo.png" width="auto" height="40" alt="Swiftcrates logo" />
         </a>
-        <span class="brand-name animated-4th lightSpeedIn">Swiftcrates</span>
+        <a href="index.html" id="brand-name-nav"><span class="brand-name animated-3rd lightSpeedIn">SwiftCrates</span></a>
         <button class="navbar-toggler animated-2nd fadeInDown" data-toggle="collapse" data-target="#lol">
           <div class="nav-icon4">
             <span class="first-span"></span>
@@ -61,12 +61,12 @@
                   works</span></a>
             </li>
             <li class="nav-item pulse-hover">
-              <a href="#" class="nav-link menu__item animated-4th fadeInDown"><span class="menu__item-name">Why choose
-                  us?</span></a>
-            </li>
-            <li class="nav-item pulse-hover">
-              <a href="#" class="nav-link menu__item animated-5th fadeInDown"><span class="menu__item-name">Shipping
+              <a href="#" class="nav-link menu__item animated-4th fadeInDown"><span class="menu__item-name">Shipping
                   rates</span></a>
+            </li>
+            <li class="nav-item pulse-hover calculator-nav-link">
+              <a class="nav-link menu__item animated-5th fadeInDown" onclick="showCalculator()"><span class="menu__item-name"><i
+                    class="fas fa-calculator"></i> Calculator</span></a>
             </li>
             <li class="nav-item pulse-hover">
               <a href="#" class="nav-link menu__item animated-6th fadeInDown"><span class="menu__item-name">Faq</span></a>
@@ -76,8 +76,8 @@
         <div class="collapse navbar-collapse" id="lol">
           <ul class="navbar-nav right-float">
             <li class="nav-item pulse-hover">
-              <a href="#" class="nav-link animated-6th fadeInDown">
-                <span class="blue-navlink animated-6th fadeInDown">Get Quoted <i class="fas fa-angle-right"></i></span>
+              <a href="getquoted.html" class="nav-link animated-6th fadeInDown">
+                <span class="blue-navlink animated-6th fadeInDown active">Get Quoted <i class="fas fa-angle-right"></i></span>
               </a>
             </li>
           </ul>
@@ -94,31 +94,31 @@
           <label for="full-name">FULL NAME</label>
           <input type="text" class="form-control" id="full-name" aria-describedby="full-name-help" placeholder="Your Name" required>
         </div>
+        <div class="form-group">
+          <label for="item-links">PRODUCT LINKS</label>
+            <textarea name="" id="item-links" rows="3" class="form-control" placeholder="http://" aria-describedby="product-links-help" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="item-variants">PRODUCT OPTIONS</label>
+          <textarea name="" id="item-links" rows="3" class="form-control" placeholder="Color, Quantity, Size"></textarea>
+        </div>
         <div class="row">
           <div class="col-6">
             <div class="form-group">
-              <label for="item-links">PRODUCT LINKS</label>
-              <textarea name="" id="item-links" rows="3" class="form-control" placeholder="http://" aria-describedby="product-links-help" required></textarea>
+              <label for="address">ADDRESS</label>
+              <input type="text" class="form-control" id="address" aria-describedby="address-help" placeholder="Your Address">
             </div>
           </div>
           <div class="col-6">
             <div class="form-group">
-              <label for="item-variants">PRODUCT OPTIONS</label>
-              <textarea name="" id="item-links" rows="3" class="form-control" placeholder="Color, Quantity, Size"></textarea>
+              <label for="island">ISLAND</label>
+              <select class="form-control" id="island">
+                <option>Male'</option>
+                <option>Hulhumale'</option>
+                <option>Other</option>
+              </select>
             </div>
           </div>
-        </div>
-        <div class="form-group">
-          <label for="address">ADDRESS</label>
-          <input type="text" class="form-control" id="address" aria-describedby="address-help" placeholder="Your Address">
-        </div>
-        <div class="form-group">
-          <label for="island">ISLAND</label>
-          <select class="form-control" id="island">
-            <option>Male'</option>
-            <option>Hulhumale'</option>
-            <option>Other</option>
-          </select>
         </div>
         <div class="form-group">
           <label for="contact-number">CONTACT NUMBER</label>
@@ -129,29 +129,71 @@
           <input type="email" data-require-error="Email is required" data-pattern-error="Invalid email format"
  class="form-control" id="email" aria-describedby="email-help" placeholder="Your Email address" required>
         </div>
+        <div data-netlify-recaptcha="true"></div>
         <button type="submit" class="btn">Get Quoted</button>
       </form>
     </div>
   </section>
 
-
-
-
+  <section class="calculator" id="calculator-popup">
+    <div class="container">
+      <div onclick="closeCalculator()">
+        <i class="fas fa-times"></i>
+      </div>
+      <form class="shipping-calculator">
+        <h1>Shipping Calculator</h1>
+        <div class="radio-div">
+          <div class="form-check pound-radio">
+            <p class="radio-label">Unit weight</p>
+            <input class="form-check-input" type="radio" name="weight-unit" id="weight-pounds" value="9" checked onchange="calculatePrice()">
+            <label class="form-check-label" for="weight-pounds">
+              Pounds
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="weight-unit" id="weight-ounce" value="0.5625" onchange="calculatePrice()">
+            <label class="form-check-label" for="weight-ounce">
+              Ounce
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="total-weight">Total shipping weight</label>
+          <input type="number" class="form-control" id="total-weight" aria-describedby="total-weight-help" placeholder="0.00"
+            onchange="calculatePrice()">
+        </div>
+  
+        <div class="form-group">
+          <label for="total-price">Package value</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="dollar-symbol">$</span>
+            </div>
+            <input type="number" class="form-control" id="total-price" aria-describedby="dollar-symbol" placeholder="0.00"
+              onchange="calculatePrice()">
+          </div>
+          <button class="btn btn-lg" type="button" onclick="calculatePrice()">CALCULATE</button>
+          <h2>Total price: <output id="final-price" name="x"></output></h2>
+        </div>
+      </form>
+    </div>
+  </section>
+  
   <footer id="swift-footer">
-
-    <div class="start-shopping">
+  
+    <div class="start-shopping wow fadeIn" data-wow-duration="2s">
       <div class="row">
         <div class="col-md">
           <h1>Start shopping now!</h1>
           <p>Shop the top trending US stores or reach out with any question.</p>
         </div>
         <div class="col-md prefooter-btn">
-          <button type="button" class="btn footer-get-quoted">Get Quoted <i class="fas fa-angle-right"></i></button>
+          <a href="getquoted.html"><button type="button" class="btn footer-get-quoted">Get Quoted <i class="fas fa-angle-right"></i></button></a>
           <button type="button" class="btn footer-contact-us">Contact Us <i class="fas fa-angle-right"></i></button>
         </div>
       </div>
     </div>
-    <div class="main-footer">
+    <div class="main-footer wow fadeIn" data-wow-duration="2s">
       <div class="row">
         <div class="col-md-4 col-6">
           <ul>
@@ -183,9 +225,8 @@
       <div class="copyright">
         <p>© Swiftcrates Pvt Ltd. 2019</p>
       </div>
-
+  
   </footer>
-
 
   <!--javascript cdn-->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

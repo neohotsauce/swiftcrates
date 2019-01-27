@@ -19,8 +19,8 @@ var typed2 = new Typed("#typed2", {
 });
 
 $(document).ready(function() {
-  $(".nav-icon4").click(function() {
-    $(this).toggleClass("open");
+  $(".navbar-toggler").click(function() {
+    $(".nav-icon4").toggleClass("open");
   });
 });
 

@@ -2,10 +2,17 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+/*section spacing*/
+section {
+  margin-top: 20vh;
+}
+
+/*stop the page from scrolling*/
 .no-scroll {
   overflow: hidden !important;
 }
 
+/*styles for header*/
 .navbar {
   background-color: #fff;
   border-bottom: none;
@@ -30,7 +37,6 @@ body {
 
 .navbar-toggler {
   border: none !important;
-  padding: 0;
 }
 
 .navbar-toggler:focus {
@@ -45,6 +51,10 @@ body {
 .active {
   color: #6e80f0 !important;
   font-weight: bold;
+}
+
+.calculator-nav-link {
+  cursor: pointer;
 }
 
 .right-float {
@@ -96,14 +106,19 @@ body {
   text-decoration: none !important;
 }
 
+/*styles for hero section
+-
+-
+-
+-*/
+
+#hero {
+  margin-top: 70px !important;
+}
+
 .front-gif {
   height: auto;
   max-width: 100%;
-  margin-top: 15% !important;
-}
-
-.gif-content {
-  margin-top: 15% !important;
 }
 
 #typed2 {
@@ -153,10 +168,14 @@ body {
   color: #fff;
   float: left;
 }
+/*styles for hero section ends here
+-
+-
+-
+-
+-
+*/
 
-#steps > .container {
-  margin-top: 12%;
-}
 #steps p {
   color: rgb(95, 95, 95);
 }
@@ -171,6 +190,21 @@ body {
   font-size: 54px;
   color: rgb(33, 37, 41);
 }
+/*styles for hero section ends here
+-
+-
+--
+-
+-
+*/
+
+/*styles for brands section starts here
+-
+-
+-
+-
+--
+*/
 
 #brands > h1 {
   font-family: "Roboto Mono", monospace;
@@ -178,7 +212,6 @@ body {
   color: #6e80f0;
   font-weight: 400;
   text-align: center;
-  margin-top: 20vh;
 }
 
 #brands > p {
@@ -204,14 +237,30 @@ body {
   font-size: 48px;
   padding: 0.5%;
 }
+/*styles for brands section ends here
+-
+-
+-
+-
+-
+--
+-
+*/
 
+/*styles for benefits section starts here
+-
+-
+-
+-
+--
+-
+*/
 #benefits > h1 {
   font-family: "Roboto Mono", monospace;
   font-size: 2.5rem;
   color: rgb(33, 37, 41);
   font-weight: 400;
   text-align: center;
-  margin-top: 20vh;
 }
 
 #benefits > p {
@@ -243,6 +292,30 @@ body {
   margin-bottom: 5%;
   color: #6e80f0;
 }
+/*
+-
+-
+-
+-
+styles for benefits section ends here
+-
+-
+-
+-
+*/
+
+/*
+-
+-
+-
+--
+styles for footer section starts here
+-
+-
+-
+-
+-
+*/
 
 #swift-footer {
   background-color: rgb(29, 34, 41);
@@ -336,8 +409,28 @@ body {
   margin-top: 5vh;
   padding-bottom: 2vh;
 }
+/*
+-
+-
+--
+-
+styles for footer section ends here
+-
+-
+-
+-*/
 
-/*styling for how it works page*/
+/*
+-
+-
+-
+-
+-styling for how it works page
+-
+-
+-
+-
+*/
 #steps-detailed {
   margin-top: 100px;
 }
@@ -409,6 +502,7 @@ body {
   position: fixed;
   z-index: 2000;
   display: none;
+  margin-top: 0 !important;
 }
 
 .calculator h1 {
