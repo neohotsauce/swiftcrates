@@ -71,15 +71,12 @@
                   ><span class="menu__item-name">How it works</span></a
                 >
               </li>
-              <li class="nav-item pulse-hover">
-                <a href="#" class="nav-link menu__item animated-4th fadeInDown"><span class="menu__item-name">Shipping rates</span></a>
-              </li>
               <li class="nav-item pulse-hover calculator-nav-link">
                 <a class="nav-link menu__item animated-5th fadeInDown" onclick="showCalculator()"><span class="menu__item-name"><i
                       class="fas fa-calculator"></i> Calculator</span></a>
               </li>
               <li class="nav-item pulse-hover">
-                <a href="#" class="nav-link menu__item animated-6th fadeInDown"><span class="menu__item-name">Faq</span></a>
+                <a href="#" class="nav-link menu__item animated-6th fadeInDown"><span class="menu__item-name">Contact Us</span></a>
               </li>
             </ul>
           </div>
@@ -304,7 +301,7 @@
                 <li class="footer-title">Discover</li>
                 <li class="pulse-hover"><a href="howitworks.html">How it works</a></li>
                 <li class="pulse-hover"><a class="calculator-nav-link" onclick="showCalculator()">Our calculator</a></li>
-                <li class="pulse-hover"><a href="howitworks.html">Faq</a></li>
+                <li id="scroll-benefits-link" class="pulse-hover" onclick="scrollBenefits()"><a>Our benefits</a></li>
               </ul>
             </div>
             <div class="col-md-4 col-6">
@@ -312,7 +309,7 @@
                 <li class="footer-title">Resources</li>
                 <li class="pulse-hover"><a href="howitworks.html">Contact us</a></li>
                 <li class="pulse-hover"><a href="privacypolicy.html">Privacy policy</a></li>
-                <li class="pulse-hover"><a href="howitworks.html">Terms & Conditions</a></li>
+                <li class="pulse-hover"><a href="terms&conditions.html">Terms & Conditions</a></li>
               </ul>
             </div>
             <div class="col-md-4 col-12">
@@ -360,6 +357,15 @@
     <script src="js/wow.min.js"></script>
     <script>
       new WOW().init();
+    </script>
+
+    <!--burger JS-->
+    <script>
+      $(document).ready(function () {
+        $(".navbar-toggler").click(function () {
+          $(".nav-icon4").toggleClass("open");
+        });
+      });
     </script>
   </body>
 </html>

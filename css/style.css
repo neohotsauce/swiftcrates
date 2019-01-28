@@ -392,6 +392,7 @@ styles for footer section starts here
   list-style: none;
   font-family: "Roboto", sans-serif;
   margin-bottom: 12px;
+  cursor: pointer;
 }
 
 .footer-title {
@@ -624,6 +625,42 @@ styles for privacy policy starts here
 
 #privacy-policy p,
 #privacy-policy li {
+  font-family: "Roboto", sans-serif;
+  color: rgb(95, 95, 95);
+}
+
+/*
+-
+-
+--
+-
+styles for privacy policy ends here
+-
+-
+-
+-*/
+
+/*
+-
+-
+--
+styles for terms & conditons start here
+-
+-
+-
+-*/
+#termsandcons h1,
+#termsandcons h4 {
+  color: #6e80f0;
+  font-family: "Roboto Mono", monospace;
+}
+
+#termsandcons h4 {
+  margin-top: 10vh;
+}
+
+#termsandcons p,
+#termsandcons li {
   font-family: "Roboto", sans-serif;
   color: rgb(95, 95, 95);
 }

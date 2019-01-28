@@ -64,3 +64,9 @@ function closeCalculator() {
 }
 
 document.getElementById("quote-form").validateForm();
+
+function scrollBenefits() {
+  document.querySelector("#benefits").scrollIntoView({
+    behavior: "smooth"
+  });
+}
