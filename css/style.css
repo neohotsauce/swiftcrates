@@ -691,6 +691,10 @@ styles for contact us starts here
   margin-top: 100px;
 }
 
+#contact-us p {
+  color: rgb(95, 95, 95);
+}
+
 #contact-us h1,
 #contact-us h4 {
   font-family: "Roboto Mono", monospace;
@@ -699,13 +703,9 @@ styles for contact us starts here
 
 #contact-us h5 {
   display: inline-block;
-  border: 3px solid;
-  border-radius: 10px;
-  padding: 10px;
+  padding: 5px;
   font-weight: bold;
-  min-width: 155px;
   text-align: center;
-  color: #fff;
 }
 
 #contact-us h5 i {
@@ -713,28 +713,27 @@ styles for contact us starts here
 }
 
 .c-messenger {
-  background-color: #0084ff;
+  color: #40a3ff;
 }
 
 .c-viber {
-  background-color: #59267c;
+  color: #7b43a0;
 }
 
 .c-instagram {
-  background-color: #e1306c;
+  color: #dd4075;
 }
 
-#contact-us .c-call a,
-#contact-us .c-sms a,
-#contact-us .c-email a {
-  text-decoration: underline;
-  font-weight: bold;
+.c-email {
   color: #6e80f0;
 }
 
-#contact-us .c-numandmail {
-  color: #212529;
-  border: none;
+.c-call {
+  color: #ffd05c;
+}
+
+.c-sms {
+  color: #deb085;
 }
 
 @media (max-width: 992px) {
