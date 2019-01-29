@@ -237,6 +237,24 @@ section {
   font-size: 48px;
   padding: 0.5%;
 }
+
+#brands .left-arrow {
+  float: left;
+  margin-left: 2vw;
+  color: #e0e0e0;
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+#brands .right-arrow {
+  float: right;
+  margin-right: 2vw;
+  color: #e0e0e0;
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 1;
+}
 /*styles for brands section ends here
 -
 -
@@ -787,6 +805,10 @@ styles for contact us starts here
   .nav-link {
     padding-right: 0.55rem !important;
     padding-left: 0.55rem !important;
+  }
+  #brands .left-arrow,
+  #brands .right-arrow {
+    display: none;
   }
 }
 
