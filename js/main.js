@@ -18,12 +18,6 @@ var typed2 = new Typed("#typed2", {
   smartBackspace: true
 });
 
-$(document).ready(function() {
-  $(".navbar-toggler").click(function() {
-    $(".nav-icon4").toggleClass("open");
-  });
-});
-
 function calculatePrice() {
   var weight = document.getElementById("total-weight").value;
   var price = document.getElementById("total-price").value;

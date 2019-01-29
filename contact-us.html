@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!--roboto, cutivve font cdn-->
+  <link href="https://fonts.googleapis.com/css?family=Cutive|Pacifico|Roboto|Roboto+Mono" rel="stylesheet">
+
+
+
+  <!--fontawesome cdn-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous" />
+
+  <!--animate.css stylesheet-->
+  <link rel="stylesheet" href="css/animate.css" />
+
+  <!--bootstrap cdn-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous" />
+
+  <!--burgericon stylesheet-->
+  <link rel="stylesheet" href="css/burger.css" />
+
+  <!--navlinks stylesheet-->
+  <link rel="stylesheet" href="css/navlinks.css" />
+
+  <!--custom stylesheet-->
+  <link rel="stylesheet" href="css/style.css" />
+
+
+
+
+  <title>Swiftcrates</title>
+
+
+
+</head>
+
+<body id="body-popup">
+  <header>
+    <nav class="navbar navbar-expand-md navbar-light menu--inola fixed-top">
+      <div class="container">
+        <a href="index.html" class="navbar-brand float-left animated-4th lightSpeedIn">
+          <img src="img/logo.png" width="auto" height="40" alt="Swiftcrates logo" />
+        </a>
+        <a href="index.html" id="brand-name-nav"><span class="brand-name animated-3rd lightSpeedIn">SwiftCrates</span></a>
+        <button class="navbar-toggler animated-2nd fadeInDown" data-toggle="collapse" data-target="#lol">
+          <div class="nav-icon4">
+            <span class="first-span"></span>
+            <span class="second-span"></span>
+            <span class="third-span"></span>
+          </div>
+        </button>
+        <div class="collapse navbar-collapse  getquoted-style" id="lol">
+          <ul class="navbar-nav ml-auto mr-auto">
+            <li class="nav-item  pulse-hover">
+              <a href="howitworks.html" class="nav-link animated-3rd fadeInDown"><span class="menu__item-name">How it
+                  works</span></a>
+            </li>
+            <li class="nav-item pulse-hover calculator-nav-link">
+              <a class="nav-link menu__item animated-5th fadeInDown" onclick="showCalculator()"><span class="menu__item-name"><i
+                    class="fas fa-calculator"></i> Calculator</span></a>
+            </li>
+            <li class="nav-item pulse-hover">
+              <a href="#" class="nav-link menu__item animated-6th fadeInDown active"><span class="menu__item-name">Contact Us</span></a>
+            </li>
+          </ul>
+        </div>
+        <div class="collapse navbar-collapse" id="lol">
+          <ul class="navbar-nav right-float">
+            <li class="nav-item pulse-hover">
+              <a href="getquoted.html" class="nav-link animated-6th fadeInDown">
+                <span class="blue-navlink animated-6th fadeInDown">Get Quoted <i class="fas fa-angle-right"></i></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section id="contact-us">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1>CONTACT US</h1>
+          <blockquote class="blockquote">
+          <p><em>Tells us how we can help and we'll get in touch shortly.</em></p>
+          </blockquote>
+          <h4>Reach us via:</h4>
+          <div>
+            <a href="http://m.me/swiftcrates" target="_blank"><h5 class="c-messenger pulse-hover"><i class="fab fa-facebook-messenger"></i>   Messenger</h5></a>
+          </div>
+          <div>
+            <a href="http://www.instagram.com/swiftcrates" target="_blank"><h5 class="c-instagram pulse-hover"><i class="fab fa-instagram"></i>    Instagram</h5></a>
+          </div>
+          <div>
+            <a href="viber://chat/?number=%2B9607847313" target="_blank"><h5 class="c-viber pulse-hover"><i class="fab fa-viber"></i> Viber us on 7847313</h5></a>
+          </div>
+          <h5 class="c-numandmail"><span class="c-call"><a href="tel:7847313" target="_blank"><i class="fas fa-mobile-alt"></i>  Call</a></span> or <span class="c-sms"><a href="sms:7847313" target="_blank"><i class="fas fa-comment"></i> Message us</a></span> on <strong>7847313</strong></h5>
+          <h5 class="c-numandmail"><span class="c-email"><a href="mailto:contact@swiftcrates.com" target="_blank"><i class="fas fa-envelope"></i> Email us</a></span> at <strong>contact@swiftcrates.com</strong></h5>
+        </div>
+        <div class="col-md-6">
+          <img src="img/contact-us.gif" alt="contact us" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="calculator" id="calculator-popup">
+    <div class="container">
+      <div onclick="closeCalculator()">
+        <i class="fas fa-times"></i>
+      </div>
+      <form class="shipping-calculator">
+        <h1>Shipping Calculator</h1>
+        <div class="radio-div">
+          <div class="form-check pound-radio">
+            <p class="radio-label">Unit weight</p>
+            <input class="form-check-input" type="radio" name="weight-unit" id="weight-pounds" value="9" checked onchange="calculatePrice()">
+            <label class="form-check-label" for="weight-pounds">
+              Pounds
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="weight-unit" id="weight-ounce" value="0.5625" onchange="calculatePrice()">
+            <label class="form-check-label" for="weight-ounce">
+              Ounce
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="total-weight">Total shipping weight</label>
+          <input type="number" class="form-control" id="total-weight" aria-describedby="total-weight-help" placeholder="0.00"
+            onchange="calculatePrice()">
+        </div>
+  
+        <div class="form-group">
+          <label for="total-price">Package value</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="dollar-symbol">$</span>
+            </div>
+            <input type="number" class="form-control" id="total-price" aria-describedby="dollar-symbol" placeholder="0.00"
+              onchange="calculatePrice()">
+          </div>
+          <button class="btn btn-lg" type="button" onclick="calculatePrice()">CALCULATE</button>
+          <h2>Total price: <output id="final-price" name="x"></output></h2>
+        </div>
+      </form>
+    </div>
+  </section>
+  
+  <footer id="swift-footer">
+  
+    <div class="start-shopping wow fadeIn" data-wow-duration="2s">
+      <div class="row">
+        <div class="col-md">
+          <h1>Start shopping now!</h1>
+          <p>Shop the top trending US stores or reach out with any question.</p>
+        </div>
+        <div class="col-md prefooter-btn">
+          <a href="getquoted.html"><button type="button" class="btn footer-get-quoted">Get Quoted <i class="fas fa-angle-right"></i></button></a>
+          <button type="button" class="btn footer-contact-us">Contact Us <i class="fas fa-angle-right"></i></button>
+        </div>
+      </div>
+    </div>
+    <div class="main-footer wow fadeIn" data-wow-duration="2s">
+      <div class="row">
+        <div class="col-md-4 col-6">
+          <ul class="footer-discover">
+            <li class="footer-title">Discover</li>
+            <li class="pulse-hover"><a href="howitworks.html">How it works</a></li>
+            <li class="pulse-hover"><a class="calculator-nav-link" onclick="showCalculator()">Our calculator</a></li>
+            <li id="scroll-benefits-link" class="pulse-hover" onclick="scrollBenefits()"><a>Our benefits</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-6">
+          <ul class="footer-resources">
+            <li class="footer-title">Resources</li>
+            <li class="pulse-hover"><a href="howitworks.html">Contact us</a></li>
+            <li class="pulse-hover"><a href="privacypolicy.html">Privacy policy</a></li>
+            <li class="pulse-hover"><a href="terms&conditions.html">Terms & Conditions</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-12">
+          <ul class="social-media">
+            <li class="footer-title">Follow Us</li>
+            <li class="pulse-hover"><a href="howitworks.html">Facebook</a></li>
+            <li class="pulse-hover"><a href="howitworks.html">Instagram</a></li>
+            <li class="pulse-hover"><a href="howitworks.html">Viber</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>© Swiftcrates Pvt Ltd. 2019</p>
+      </div>
+  
+  </footer>
+  
+  
+  <!--javascript cdn-->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <!--bootstrap cdn-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  
+  <!--typed.js CDN-->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+  
+  
+  <!--custom js file-->
+  <script src="js/main.js"></script>
+  
+  <!--wow js-->
+  <script src="js/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+  
+  <!--burger JS-->
+  <script>
+    $(document).ready(function () {
+      $(".navbar-toggler").click(function () {
+        $(".nav-icon4").toggleClass("open");
+      });
+    });
+  </script>
+  </body>
+  
+  </html>
