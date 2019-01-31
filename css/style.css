@@ -481,7 +481,16 @@ styles for footer section ends here
   font-size: 1rem;
 }
 
-/*styles for get quoted page*/
+/*styles for get quoted page
+
+--
+-
+-
+-
+-
+-
+-
+*/
 #get-quoted-form {
   max-width: 700px;
   margin-top: 100px;
@@ -514,6 +523,10 @@ styles for footer section ends here
 #get-quoted-form h1 {
   color: #6e80f0;
   font-family: "Roboto Mono", monospace;
+}
+
+#get-quoted-form .product-options, #get-quoted-form .product-links {
+  margin-bottom: 0.5rem;
 }
 
 /*styles for calculator*/

@@ -64,3 +64,7 @@ function scrollBenefits() {
     behavior: "smooth"
   });
 }
+
+$("#add-product").click(function() {
+  $(".product-info").append("<p>Hello world<p>");
+});
