@@ -2,9 +2,40 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+/*styles for text clicks*/
+.p-clicks {
+  color: #6e80f0;
+  font-weight: bold;
+}
+
+.p-clicks:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: #6e80f0;
+}
+
+/*universal style for p */
+p {
+  color: rgb(95, 95, 95);
+  font-family: "Roboto", sans-serif;
+}
+
 /*section spacing*/
 section {
   margin-top: 20vh;
+}
+
+/*styles for messenger chta*/
+.messenger-chat {
+  margin: 0 !important;
+  padding: 0 !important;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: transparent;
+  z-index: 100;
+  color: #40a3ff;
+  font-size: 3rem;
 }
 
 /*stop the page from scrolling*/
@@ -51,10 +82,6 @@ section {
 .active {
   color: #6e80f0 !important;
   font-weight: bold;
-}
-
-.calculator-nav-link {
-  cursor: pointer;
 }
 
 .right-float {
@@ -492,7 +519,7 @@ styles for footer section ends here
 -
 */
 #get-quoted-form {
-  max-width: 700px;
+  max-width: 900px;
   margin-top: 100px;
 }
 
@@ -778,6 +805,44 @@ styles for contact us starts here
 
 .c-sms {
   color: #deb085;
+}
+
+/*
+-
+-
+--
+styles for contact us page ends here
+-
+-
+-
+-*/
+
+/*
+-
+-
+-
+
+--
+--
+styles for about us page starts here
+-
+-
+-
+-
+-
+--*/
+#about-us h1 {
+  text-align: center;
+  color: #6e80f0;
+  font-family: "Roboto Mono", monospace;
+  font-weight: bold;
+}
+
+#about-us h3 {
+  color: #6e80f0;
+  font-family: "Roboto Mono", monospace;
+  font-weight: bold;
+  margin-top: 5vh;
 }
 
 @media (max-width: 992px) {

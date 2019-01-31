@@ -63,7 +63,7 @@
                   works</span></a>
             </li>
             <li class="nav-item pulse-hover calculator-nav-link">
-              <a href="aboutus.html" class="nav-link menu__item animated-5th fadeInDown"><span class="menu__item-name">About
+              <a href="aboutus.html" class="nav-link menu__item animated-5th fadeInDown active"><span class="menu__item-name">About
                   Us</span></a>
             </li>
             <li class="nav-item pulse-hover">
@@ -75,7 +75,7 @@
         <div class="collapse navbar-collapse" id="lol">
           <ul class="navbar-nav right-float">
             <li class="nav-item pulse-hover">
-              <a href="getquoted.html" class="nav-link animated-6th fadeInDown active">
+              <a href="getquoted.html" class="nav-link animated-6th fadeInDown">
                 <span class="blue-navlink animated-6th fadeInDown">Get Quoted <i class="fas fa-angle-right"></i></span>
               </a>
             </li>
@@ -85,79 +85,42 @@
     </nav>
   </header>
 
-  <section id="get-quoted-form" class="mx-auto">
+  <section id="about-us">
     <div class="container">
-      <h1>Get a Quote!</h1>
-      <form name="get-quoted" method="POST" data-netlify="true" id="quote-form">
-        <div class="form-group">
-          <label for="full-name">FULL NAME</label>
-          <input name="full_name" type="text" class="form-control" id="full-name" aria-describedby="full-name-help" placeholder="Your Name" required>
-        </div>
-        <div class="row">
-          <div class="col-6">
-            <div>
-              <label for="item-links">PRODUCT LINKS</label>
-              <!--
-                <textarea name="" id="item-links" rows="1" class="form-control" placeholder="http://" aria-describedby="product-links-help" required></textarea>
-                -->
-              </div>
-          </div>
-          <div class="col-6">
-            <div>
-              <label for="item-variants">PRODUCT OPTIONS</label>
-              <!--
-              <textarea name="" id="item-links" rows="1" class="form-control" placeholder="Color, Quantity, Size"></textarea>
-            -->
-            </div>
-          </div>
-        </div>
-        <div class="field_wrapper">
-          <div class="row">
-            <div class="col-6">
-              <textarea rows="1" class="form-control product-links" placeholder="http://" aria-describedby="product-links-help"
-                required></textarea>
-            </div>
-            <div class="col-5">
-              <textarea rows="1" class="form-control product-options" placeholder="Color, Quantity, Size"></textarea>
-            </div>
-            <div>
-              <a href="javascript:void(0);" class="add_button" title="Add field"><i class="fas fa-plus"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-6">
-            <div class="form-group">
-              <label for="address">ADDRESS</label>
-              <input name="address" type="text" class="form-control" id="address" aria-describedby="address-help" placeholder="Your Address">
-            </div>
-          </div>
-          <div class="col-6">
-            <div class="form-group">
-              <label for="island">ISLAND</label>
-              <select name="island" class="form-control" id="island">
-                <option>Male'</option>
-                <option>Hulhumale'</option>
-                <option>Other</option>
-              </select>
-            </div>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="contact-number">CONTACT NUMBER</label>
-          <input name="contact_number" type="number" class="form-control" id="contact-number" aria-describedby="contact-number-help" placeholder="Your phone number" required>
-        </div>
-        <div class="form-group">
-          <label for="email">EMAIL ADDRESS</label>
-          <input name="email" type="email" data-require-error="Email is required" data-pattern-error="Invalid email format"
- class="form-control" id="email" aria-describedby="email-help" placeholder="Your Email address" required>
-        </div>
-        <button type="submit" class="btn" onclick="outputArray()">Get Quoted</button>
-        <input id="hidden-product_links" type="hidden" name="produt_links">
-        <input id="hidden-product_options" type="hidden" name="product_options">
-      </form>
+      <h1>About Us</h1>
+      <h3>Our Mission</h3>
+      <p>
+        We at Swiftcrates aim to deliver an affordable and reliable shipping service that links every Maldivian shopper to
+        millions of products from all US stores, while ensuring the complete satisfaction of all our customer
+      </p>
+      <h3>Our Vision</h3>
+      <p>
+        Swiftcrates main goal is to establish and maintain a customer oriented e-commerce platform with the most lowest rates
+        on shipping while enabling every maldivian shopper to conveniently access the top trending brands in all of US.
+      </p>
+      <p>
+        Tired of US stores not shipping internationally? Wasting money on taxes and extreme shipping costs when buying your
+        favourite products from the US? Swiftcrates has a direct response to the rising/emerging/dawning needs of today's
+        Maldivians shoppers. We enable our customers to capitalize on the vast variety and low cost of products in the US and
+        stay up to date with the latest fashion trends and gadgets not available locally, and have it delivered directly to
+        your doorstep.
+      </p>
+      <p>
+        We at Swiftcrates are devoted to providing you with excellent service that exceeds even the most elite industry
+        standards, while ensuring our customers smooth and genuine service. We value customer satisfaction above all and
+        believe you are entitled to a simple and hassle-free experience when shopping online.
+      </p>
+      <p>
+        Therefore, we are passionate on the nurturing the growth of the Swiftcrates online community, boosting strong and
+        lasting relationships with our customers and continuing to develop and improve our services at swiftcrates.
+      </p>
+      <p>
+        If you have always wished to tap in the US market but never had the viable option, Swiftcrates is the perfect solution
+        for you.
+      </p>
     </div>
   </section>
+
 
   <section class="calculator" id="calculator-popup">
     <div class="container">
@@ -202,7 +165,8 @@
       </form>
     </div>
   </section>
-  
+
+
   <footer id="swift-footer">
   
     <div class="start-shopping wow fadeIn" data-wow-duration="2s">
@@ -249,7 +213,8 @@
       </div>
   
   </footer>
-
+  
+  
   <!--javascript cdn-->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
@@ -258,59 +223,28 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
-
+  
   <!--typed.js CDN-->
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
-
-    <!--form validation js-->
-    <script src="js/form-validation.js"></script>
-
+  
+  
   <!--custom js file-->
   <script src="js/main.js"></script>
-
-
+  
   <!--wow js-->
   <script src="js/wow.min.js"></script>
   <script>
     new WOW().init();
   </script>
-
-
+  
   <!--burger JS-->
   <script>
     $(document).ready(function () {
-      $(".nav-icon4").click(function () {
-        $(this).toggleClass("open");
+      $(".navbar-toggler").click(function () {
+        $(".nav-icon4").toggleClass("open");
       });
     });
   </script>
-
-  <!--add field-->
-  <script type="text/javascript">
-    $(document).ready(function () {
-      var maxField = 10; //Input fields increment limitation
-      var addButton = $('.add_button'); //Add button selector
-      var wrapper = $('.field_wrapper'); //Input field wrapper
-      var fieldHTML = '<div class="row"><div class="col-6"><textarea name="product_links" rows="1" class="form-control product-links" placeholder="http://" aria-describedby="product-links-help"required></textarea> </div ><div class="col-5"><textarea name="product_options" rows="1" class="form-control product-options" placeholder="Color, Quantity, Size"></textarea></div><div><a href="javascript:void(0);" class="remove_button"><i class="fas fa-trash-alt"></i></a></div></div >'; //New input field html 
-      var x = 1; //Initial field counter is 1
-
-      //Once add button is clicked
-      $(addButton).click(function () {
-        //Check maximum number of input fields
-        if (x < maxField) {
-          x++; //Increment field counter
-          $(wrapper).append(fieldHTML); //Add field html
-        }
-      });
-
-      //Once remove button is clicked
-      $(wrapper).on('click', '.remove_button', function (e) {
-        e.preventDefault();
-        $(this).parentsUntil('.fieldwrapper').remove('.row'); //Remove field html
-        x--; //Decrement field counter
-      });
-    });
-  </script>
-</body>
-
-</html>
+  </body>
+  
+  </html>
