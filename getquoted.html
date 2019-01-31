@@ -92,7 +92,7 @@
       <form name="get-quoted" method="POST" data-netlify="true" id="quote-form">
         <div class="form-group">
           <label for="full-name">FULL NAME</label>
-          <input type="text" class="form-control" id="full-name" aria-describedby="full-name-help" placeholder="Your Name" required>
+          <input name="full_name" type="text" class="form-control" id="full-name" aria-describedby="full-name-help" placeholder="Your Name" required>
         </div>
         <div class="row">
           <div class="col-6">
@@ -115,11 +115,11 @@
         <div class="field_wrapper">
           <div class="row">
             <div class="col-6">
-              <textarea name="product-links" rows="1" class="form-control product-links" placeholder="http://" aria-describedby="product-links-help"
+              <textarea name="product_links" rows="1" class="form-control product-links" placeholder="http://" aria-describedby="product-links-help"
                 required></textarea>
             </div>
             <div class="col-5">
-              <textarea name="product-options" rows="1" class="form-control product-options" placeholder="Color, Quantity, Size"></textarea>
+              <textarea name="product_options" rows="1" class="form-control product-options" placeholder="Color, Quantity, Size"></textarea>
             </div>
             <div>
               <a href="javascript:void(0);" class="add_button" title="Add field">+</a>
@@ -130,13 +130,13 @@
           <div class="col-6">
             <div class="form-group">
               <label for="address">ADDRESS</label>
-              <input type="text" class="form-control" id="address" aria-describedby="address-help" placeholder="Your Address">
+              <input name="address" type="text" class="form-control" id="address" aria-describedby="address-help" placeholder="Your Address">
             </div>
           </div>
           <div class="col-6">
             <div class="form-group">
               <label for="island">ISLAND</label>
-              <select class="form-control" id="island">
+              <select name="island" class="form-control" id="island">
                 <option>Male'</option>
                 <option>Hulhumale'</option>
                 <option>Other</option>
@@ -146,14 +146,13 @@
         </div>
         <div class="form-group">
           <label for="contact-number">CONTACT NUMBER</label>
-          <input type="number" class="form-control" id="contact-number" aria-describedby="contact-number-help" placeholder="Your phone number" required>
+          <input name="contact_number" type="number" class="form-control" id="contact-number" aria-describedby="contact-number-help" placeholder="Your phone number" required>
         </div>
         <div class="form-group">
           <label for="email">EMAIL ADDRESS</label>
-          <input type="email" data-require-error="Email is required" data-pattern-error="Invalid email format"
+          <input name="email" type="email" data-require-error="Email is required" data-pattern-error="Invalid email format"
  class="form-control" id="email" aria-describedby="email-help" placeholder="Your Email address" required>
         </div>
-        <div data-netlify-recaptcha="true"></div>
         <button type="submit" class="btn">Get Quoted</button>
       </form>
     </div>
@@ -293,7 +292,7 @@
       var maxField = 10; //Input fields increment limitation
       var addButton = $('.add_button'); //Add button selector
       var wrapper = $('.field_wrapper'); //Input field wrapper
-      var fieldHTML = '<div class="row"><div class="col-6"><textarea name="" rows="1" class="form-control product-links" placeholder="http://" aria-describedby="product-links-help"required></textarea> </div ><div class="col-5"><textarea name="" rows="1" class="form-control product-options" placeholder="Color, Quantity, Size"></textarea></div><div><a href="javascript:void(0);" class="remove_button">X</a></div></div >'; //New input field html 
+      var fieldHTML = '<div class="row"><div class="col-6"><textarea name="product_links" rows="1" class="form-control product-links" placeholder="http://" aria-describedby="product-links-help"required></textarea> </div ><div class="col-5"><textarea name="product_options" rows="1" class="form-control product-options" placeholder="Color, Quantity, Size"></textarea></div><div><a href="javascript:void(0);" class="remove_button">X</a></div></div >'; //New input field html 
       var x = 1; //Initial field counter is 1
 
       //Once add button is clicked
