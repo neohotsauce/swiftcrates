@@ -525,8 +525,21 @@ styles for footer section ends here
   font-family: "Roboto Mono", monospace;
 }
 
-#get-quoted-form .product-options, #get-quoted-form .product-links {
+#get-quoted-form .product-options,
+#get-quoted-form .product-links {
   margin-bottom: 0.5rem;
+}
+
+#get-quoted-form .add_button {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #6e80f0;
+}
+
+#get-quoted-form .remove_button {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: rgb(139, 25, 25);
 }
 
 /*styles for calculator*/

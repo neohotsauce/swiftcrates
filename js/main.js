@@ -69,12 +69,12 @@ function outputArray() {
   var item_links = document.getElementsByClassName("product-links");
   var str = "";
   for (var i = 0; i < item_links.length; i++) {
-    str = str + "|" + item_links.item(i).value;
+    str = str + "                   " + item_links.item(i).value;
   }
   var item_options = document.getElementsByClassName("product-options");
   var str2 = "";
   for (var i = 0; i < item_options.length; i++) {
-    str2 = str2 + "|" + item_options.item(i).value;
+    str2 = str2 + "                  " + item_options.item(i).value;
   }
 
   var links_value = $("#hidden-product_links");

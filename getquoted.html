@@ -122,7 +122,7 @@
               <textarea rows="1" class="form-control product-options" placeholder="Color, Quantity, Size"></textarea>
             </div>
             <div>
-              <a href="javascript:void(0);" class="add_button" title="Add field">+</a>
+              <a href="javascript:void(0);" class="add_button" title="Add field"><i class="fas fa-plus"></i></a>
             </div>
           </div>
         </div>
@@ -294,7 +294,7 @@
       var maxField = 10; //Input fields increment limitation
       var addButton = $('.add_button'); //Add button selector
       var wrapper = $('.field_wrapper'); //Input field wrapper
-      var fieldHTML = '<div class="row"><div class="col-6"><textarea name="product_links" rows="1" class="form-control product-links" placeholder="http://" aria-describedby="product-links-help"required></textarea> </div ><div class="col-5"><textarea name="product_options" rows="1" class="form-control product-options" placeholder="Color, Quantity, Size"></textarea></div><div><a href="javascript:void(0);" class="remove_button">X</a></div></div >'; //New input field html 
+      var fieldHTML = '<div class="row"><div class="col-6"><textarea name="product_links" rows="1" class="form-control product-links" placeholder="http://" aria-describedby="product-links-help"required></textarea> </div ><div class="col-5"><textarea name="product_options" rows="1" class="form-control product-options" placeholder="Color, Quantity, Size"></textarea></div><div><a href="javascript:void(0);" class="remove_button"><i class="fas fa-trash-alt"></i></a></div></div >'; //New input field html 
       var x = 1; //Initial field counter is 1
 
       //Once add button is clicked
