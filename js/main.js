@@ -65,6 +65,20 @@ function scrollBenefits() {
   });
 }
 
-$("#add-product").click(function() {
-  $(".product-info").append("<p>Hello world<p>");
-});
+function outputArray() {
+  var item_links = document.getElementsByClassName("product-links");
+  var str = "";
+  for (var i = 0; i < item_links.length; i++) {
+    str = str + "|" + item_links.item(i).value;
+  }
+  var item_options = document.getElementsByClassName("product-options");
+  var str2 = "";
+  for (var i = 0; i < item_options.length; i++) {
+    str2 = str2 + "|" + item_options.item(i).value;
+  }
+
+  var links_value = $("#hidden-product_links");
+  links_value.val(str);
+  var options_value = $("#hidden-product_options");
+  options_value.val(str2);
+}

@@ -115,11 +115,11 @@
         <div class="field_wrapper">
           <div class="row">
             <div class="col-6">
-              <textarea name="product_links" rows="1" class="form-control product-links" placeholder="http://" aria-describedby="product-links-help"
+              <textarea rows="1" class="form-control product-links" placeholder="http://" aria-describedby="product-links-help"
                 required></textarea>
             </div>
             <div class="col-5">
-              <textarea name="product_options" rows="1" class="form-control product-options" placeholder="Color, Quantity, Size"></textarea>
+              <textarea rows="1" class="form-control product-options" placeholder="Color, Quantity, Size"></textarea>
             </div>
             <div>
               <a href="javascript:void(0);" class="add_button" title="Add field">+</a>
@@ -153,7 +153,9 @@
           <input name="email" type="email" data-require-error="Email is required" data-pattern-error="Invalid email format"
  class="form-control" id="email" aria-describedby="email-help" placeholder="Your Email address" required>
         </div>
-        <button type="submit" class="btn">Get Quoted</button>
+        <button type="submit" class="btn" onclick="outputArray()">Get Quoted</button>
+        <input id="hidden-product_links" type="hidden" name="produt_links">
+        <input id="hidden-product_options" type="hidden" name="product_options">
       </form>
     </div>
   </section>
