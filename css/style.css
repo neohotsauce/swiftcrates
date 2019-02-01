@@ -25,13 +25,13 @@ section {
   margin-top: 20vh;
 }
 
-/*styles for messenger chta*/
+/*styles for messenger chat*/
 .messenger-chat {
   margin: 0 !important;
   padding: 0 !important;
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: 20px;
+  right: 20px;
   background-color: transparent;
   z-index: 100;
   color: #40a3ff;
