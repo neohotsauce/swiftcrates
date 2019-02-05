@@ -11,7 +11,7 @@ $(function() {
 });
 
 var typed2 = new Typed("#typed2", {
-  strings: ["Swift Delivery!", "Swift Rates!", "Swift Men!"],
+  strings: ["Swift Delivery!", "Lowest Rates!", "Tax Free!", "Shop Now!"],
   typeSpeed: 70,
   backSpeed: 20,
   loop: true,
